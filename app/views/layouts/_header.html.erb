@@ -3,7 +3,6 @@
     <%= link_to "Social Apartment Life+", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "ホーム", root_path %></li>
         <% if logged_in? %>
           <li><%= link_to "全てのユーザー", users_path %></li>
           <li class="dropdown">
@@ -20,7 +19,6 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "ログイン", login_path %></li>
         <% end %>
       </ul>
     </nav>
