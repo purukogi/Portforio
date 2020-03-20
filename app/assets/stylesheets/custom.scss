@@ -74,7 +74,8 @@ p {
 }
 
 .kv{
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .kv img{
@@ -83,6 +84,43 @@ p {
 
 .login_button{
   margin-top: 20px;
+}
+
+.new_user{
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+  margin-right: 10px;
+  border: 3px solid #fff;
+  border-radius: 40px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all  0.2s ease;
+}
+
+.new_user:hover{
+  color: white;
+  background-color: #f19149;
+  text-decoration: none;
+}
+
+.login_screen{
+  font-size: 20px;
+  color: white;
+  padding: 15px;
+  border: 3px solid #fff;
+  border-radius: 40px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all  0.2s ease;
+}
+
+.login_screen:hover{
+  color: white;
+  background-color: #f19149;
+  text-decoration: none;
 }
 
 
