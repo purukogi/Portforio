@@ -127,6 +127,12 @@ p {
   color: #fff;
 }
 
+.room{
+  font-size: 20px;
+  margin-top: 20px;
+  color: #fff;
+}
+
 .mail-address2{
   font-size: 20px;
   margin-top: 20px;
@@ -195,13 +201,21 @@ p {
 
 /* show.html */
 .information{
-  color: #fff;
-  background-color: #0068b7;
-  height: 100px;
+  color: #323232;
+  background-color: #fff;
+  height: 80px;
   margin-top: 30px;
   border-radius: 8px;
+  font-size: 20px;
 }
 
+.information th{
+  padding-left: 20px;
+}
+
+.information td{
+  padding-left: 20px;
+}
 
 
 

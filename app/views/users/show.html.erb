@@ -1,8 +1,18 @@
 <% provide(:title, @user.name) %>
-<div class="col-md-6 col-md-offset-3 information center">
+<!-- <div class="col-md-6 col-md-offset-3 information center"> -->
+  <table class="col-md-6 col-md-offset-3 information">
+    <tr>
+      <th>名前</th>
+      <th>入居中のSA</th>
+      <th>部屋番号</th>
+    </tr>
+    <tr>
+      <td><span><%= @user.name %></span></td>
+      <td><span><%= @user.department %></span></td>
+      <td><span><%= @user.room %></span></td>
+    </tr>
+  </table>
 
-  
-</div>
 
 <div class="col-md-6 col-md-offset-3 events_schedule center">
   イベントスケジュール

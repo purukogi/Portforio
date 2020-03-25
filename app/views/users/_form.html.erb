@@ -16,6 +16,11 @@
   <%= f.text_field :department, class: "form-control" %>
 </div>
 
+<div class="room">
+  <%= f.label :room, class: "label-#{yield(:class_text)}" %>
+  <%= f.text_field :room, class: "form-control" %>
+</div>
+
 <div class="password">
   <%= f.label :password, class: "label-#{yield(:class_text)}" %>
   <%= f.password_field :password, class: "form-control" %>
