@@ -237,24 +237,26 @@ p {
 
 
 
-.events_schedule{
-  border: 4px solid #fff;
-  border-radius: 45px;
-  margin-top: 60px;
-  padding: 16px;
-  font-size: 32px;
+.menu_header{
+  height: 40px;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 14px;
   color: #fff;
-  background-color: #0077bb;
 }
 
-.private_box{
-  border: 4px solid #fff;
-  border-radius: 45px;
-  margin-top: 50px;
+.menu_header tr td{
+  border: 6px solid #fff;
+}
+
+.event_menu{
   padding: 16px;
   font-size: 32px;
   color: #fff;
   background-color: #0077bb;
+  min-height: 240px;
+  border-right: 6px solid #fff;
+  border-left: 6px solid #fff;
 }
 
 .cooler_box{
