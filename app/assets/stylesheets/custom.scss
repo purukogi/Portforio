@@ -251,12 +251,21 @@ p {
 
 .event_menu{
   padding: 16px;
-  font-size: 32px;
   color: #fff;
   background-color: #0077bb;
   min-height: 240px;
   border-right: 6px solid #fff;
   border-left: 6px solid #fff;
+}
+
+.event_menu_header{
+  
+}
+
+.event_menu_header tr td{
+  border: 2px solid #fff;
+  padding: 5px 0 5px 0;
+  font-size: 14px;
 }
 
 .cooler_box{
