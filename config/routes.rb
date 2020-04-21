@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   
   # イベントページ
-  get '/event_new', to: 'events#new'
+  get '/event_signup', to: 'events#event_signup'
   post '/event_new', to: 'events#create'
   delete '/event_destroy', to: 'events#destroy'
   
