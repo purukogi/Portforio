@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
   
   def event_signup
-    @event = Event.find(params[:id])
   end
   
   def create
