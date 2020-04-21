@@ -28,6 +28,14 @@
       <td>開催場所</td>
       <td>開催日程</td>
     </tr>
+    
+    <% @events.each do |event| %>
+    <tr>
+      <td><%= event.eventname %></td>
+      <td><%= event.place %></td>
+      <td><%= l(event.eventday, format: :long) %></td>
+    </tr>
+    <% end %>
   </table>
 </div>
 

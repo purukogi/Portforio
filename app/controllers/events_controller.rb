@@ -1,15 +1,16 @@
 class EventsController < ApplicationController
   
   def event_signup
+    @event = Event.new
   end
   
   def create
     @event = Event.new(event_params)
     if @event.save
       flash[:success] = 'イベントを追加しました。'
-      redirect_to events_url
+      redirect_to users_url
     else
-      redirect_to events_url
+      redirect_to users_url
     end
   end
   

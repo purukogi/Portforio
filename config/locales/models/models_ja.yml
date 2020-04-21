@@ -13,8 +13,8 @@ ja:
           password_confirmation: パスワード再入力
           created_at: 作成日
           updated_at: 更新日
-        ivent:
-          name: イベント名
+        event:
+          eventname: イベント名
           place: 開催場所
-          iventday: 開催日程
+          eventday: 開催日程
           

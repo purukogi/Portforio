@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @events = Event.all
   end
 
   def new
