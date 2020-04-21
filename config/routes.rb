@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # イベントページ
   get 'event_signup', to: 'events#event_signup'
   post 'event_new', to: 'events#create'
-  delete 'event_destroy', to: 'events#destroy'
+  delete '/destroy', to: 'events#destroy'
   
   resources :users
 end

@@ -20,6 +20,13 @@ class EventsController < ApplicationController
   def event_update
   end
   
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    flash[:success] = "イベントを削除しました。"
+    redirect_to users_url
+  end
+  
   private # strongparameterの設定
 
     def event_params
