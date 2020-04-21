@@ -24,6 +24,7 @@
 <div class="col-md-10 col-md-offset-1 event_menu center">
   <table class="col-md-12 event_menu_header">
     <tr>
+      <td>ID</td>
       <td>イベント名</td>
       <td>開催場所</td>
       <td>開催日程</td>
@@ -33,19 +34,20 @@
       <% else %>
         <td colspan="2">参加状況</td>
       <% end %>
-      <td>ID</td>
+      
     </tr>
     
     <% @events.each do |event| %>
     <tr>
+      <td><%= event.id %></td>
       <td><%= event.eventname %></td>
       <td><%= event.place %></td>
       <td><%= l(event.eventday, format: :long) %></td>
       <td></td>
-      <td><%= link_to "削除", destroy_url, method: :delete,
+      <td><%= link_to "削除", {controller: "events", action: "destroy", id: event.id}, method: :delete,
           data: { confirm: "削除してよろしいですか？" },
           class: "btn btn-danger" %></td>
-      <td><%= event.id %></td>
+      
      
     </tr>
     <% end %>

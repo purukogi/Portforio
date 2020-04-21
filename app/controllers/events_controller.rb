@@ -8,9 +8,9 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     if @event.save
       flash[:success] = 'イベントを追加しました。'
-      redirect_to users_url
+      redirect_back(fallback_location: root_path)
     else
-      redirect_to users_url
+      redirect_back(fallback_location: root_path)
     end
   end
   
@@ -24,7 +24,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @event.destroy
     flash[:success] = "イベントを削除しました。"
-    redirect_to users_url
+    redirect_back(fallback_location: root_path)
   end
   
   private # strongparameterの設定
