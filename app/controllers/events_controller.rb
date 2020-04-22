@@ -30,6 +30,6 @@ class EventsController < ApplicationController
   private # strongparameterの設定
 
     def event_params
-      params.require(:event).permit(:eventname, :place, :eventday)
+      params.require(:event).permit(:eventname, :eventdetail, :place, :eventday)
     end
 end
