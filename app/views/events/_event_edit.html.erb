@@ -1,0 +1,37 @@
+<div class="modal-dialog modal-lg modal-dialog-center">
+  <div class="modal-content">
+    
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <h2 class="modal-title">イベント編集</h2>
+    </div>
+    
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          
+          <%= form_with(model: @event, url: event_update_path(id: @event.id), local: true, method: :patch) do |f| %>
+
+          <%= f.label :"イベント名", class: "label-user--edit" %>
+          <%= f.text_field :eventname, class: "form-control" %>
+
+          <%= f.label :"イベント詳細", class: "label-user--edit" %>
+          <%= f.text_area :eventdetail, class: "form-control" %>
+
+          <%= f.label :"開催場所", class: "label-user--edit" %>
+          <%= f.text_field :place, class: "form-control" %>
+      
+          <%= f.label "開催日", class: "label-#{yield(:class_text)}" %>
+          <%= f.date_field :eventday, class: "form-control" %>
+
+          <%= f.submit "更新", class: "btn btn-primary btn-block" %>
+          
+          <% end %>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </div>

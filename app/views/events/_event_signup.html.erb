@@ -20,7 +20,7 @@
             <%= f.text_field :eventname, class: "form-control" %>
             
             <%= f.label "イベント詳細", class: "label-#{yield(:class_text)}" %>
-            <%= f.text_field :eventdetail, class: "form-control" %>
+            <%= f.text_area :eventdetail, class: "form-control" %>
 
             <%= f.label "開催場所", class: "label-#{yield(:class_text)}" %>
             <%= f.text_field :place, class: "form-control" %>

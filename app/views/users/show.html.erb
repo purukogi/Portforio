@@ -47,7 +47,9 @@
       <td class="col-md-1"></td>
       <td class="col-md-1"></td>
       <% if current_user.admin? %>
-      <td class="col-md-1"></td>
+        <td class="col-md-1">
+          <%= link_to "編集", {controller: "events", action: "event_edit", id: event.id}, remote: true, class: "btn btn-success" %>
+        </td>
       <td class="col-md-1">
           <%= link_to "削除", {controller: "events", action: "destroy", id: event.id}, method: :delete, data: { confirm: "削除してよろしいですか？" }, class: "btn btn-danger" %>
         <% else %>
@@ -63,4 +65,5 @@
 <% end %>
 <!--モーダルウインドウ表示-->
 <div id="event_signup" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+<div id="event_edit" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
  

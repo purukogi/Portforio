@@ -15,9 +15,17 @@ class EventsController < ApplicationController
   end
   
   def event_edit
+    @event = Event.find(params[:id])
   end
   
   def event_update
+    @event = Event.find(params[:id])
+    if @event.update_attributes(event_params)
+      flash[:success] = 'イベントを更新しました。'
+      redirect_back(fallback_location: root_path)
+    else
+      redirect_back(fallback_location: root_path)
+    end
   end
   
   def destroy
