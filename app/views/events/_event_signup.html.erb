@@ -16,16 +16,16 @@
           
           <%= form_with(model: @event, url: event_new_path, local: true, method: :post) do |f| %>
 
-            <%= f.label "イベント名", class: "label-#{yield(:class_text)}" %>
+            <%= f.label "イベント名", class: "eventname" %>
             <%= f.text_field :eventname, class: "form-control" %>
             
-            <%= f.label "イベント詳細", class: "label-#{yield(:class_text)}" %>
+            <%= f.label "イベント詳細", class: "eventdetail" %>
             <%= f.text_area :eventdetail, class: "form-control" %>
 
-            <%= f.label "開催場所", class: "label-#{yield(:class_text)}" %>
+            <%= f.label "開催場所", class: "place" %>
             <%= f.text_field :place, class: "form-control" %>
 
-            <%= f.label "開催日", class: "label-#{yield(:class_text)}" %>
+            <%= f.label "開催日", class: "eventday" %>
             <%= f.date_field :eventday, class: "form-control" %>
 
             <div class="center">
