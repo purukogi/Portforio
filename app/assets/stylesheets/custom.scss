@@ -236,12 +236,18 @@ p {
 }
 
 .pbox_link{
+  padding: 10px 116px 10px 116px;
   color: #fff;
   background-color: #eee;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all  0.4s ease;
 }
 
 .pbox_link:hover{
-  background-color: #dd8240;
+  text-decoration: none;
+  background-color: #f19149;
   color: #fff;
 }
 
