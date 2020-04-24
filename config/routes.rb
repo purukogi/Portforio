@@ -16,5 +16,8 @@ Rails.application.routes.draw do
   get 'event_edit', to: 'events#event_edit'
   patch 'event_update', to: 'events#event_update'
   
+  # プライベートボックス
+  get 'pbox_index', to: 'pboxes#index'
+  
   resources :users
 end

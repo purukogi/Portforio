@@ -1,0 +1,2 @@
+class Pbox < ApplicationRecord
+end

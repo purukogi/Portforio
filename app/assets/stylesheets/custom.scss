@@ -235,6 +235,16 @@ p {
   padding-left: 20px;
 }
 
+.pbox_link{
+  color: #fff;
+  background-color: #eee;
+}
+
+.pbox_link:hover{
+  background-color: #dd8240;
+  color: #fff;
+}
+
 .menu_header{
   height: 40px;
   margin-top: 10px;
