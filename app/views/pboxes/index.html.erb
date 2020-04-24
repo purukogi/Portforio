@@ -33,10 +33,10 @@
 </div>
 
 <% if current_user.admin? %>
-  <%= link_to "新規登録", event_signup_path, remote: true, class: "col-md-12 center new_event" %>
+  <%= link_to "新規登録", {controller: "pboxes", action: "show", id: @user.id}, remote: true, class: "col-md-12 center new_event" %>
 <% end %>
 <!--モーダルウインドウ表示-->
-
+<div id="show" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
  
 
 
