@@ -251,6 +251,22 @@ p {
   color: #fff;
 }
 
+.event_link{
+  padding: 10px 116px 10px 116px;
+  color: #fff;
+  background-color: #eee;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all  0.4s ease;
+}
+
+.event_link:hover{
+  text-decoration: none;
+  background-color: #f19149;
+  color: #fff;
+}
+
 .menu_header{
   height: 40px;
   margin-top: 10px;
