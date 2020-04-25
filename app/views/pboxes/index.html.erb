@@ -29,14 +29,20 @@
     <tr>
       <td>名前</td>
     </tr>
+    
+    <% @pboxes.each do |pbox| %>
+    <tr>
+      <td><% pbox.name %></td>
+    </tr>
+    <% end %>
   </table>
 </div>
 
 <% if current_user.admin? %>
-  <%= link_to "新規登録", {controller: "pboxes", action: "show", id: @user.id}, remote: true, class: "col-md-12 center new_event" %>
+  <%= link_to "新規登録", new_user_pbox_path(id: @user.id), remote: true, class: "col-md-12 center new_event" %>
 <% end %>
 <!--モーダルウインドウ表示-->
-<div id="show" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
+<div id="new" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
  
 
 
