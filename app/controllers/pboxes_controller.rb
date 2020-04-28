@@ -10,8 +10,7 @@ class PboxesController < ApplicationController
   end
   
   def create
-    @user = User.find(params[:user_id])
-    @pbox = Pbox.new(pbox_params)
+    @pbox = current_user.pboxes.build(pbox_params)
     if @pbox.save
       flash[:success] = '新規作成に成功しました。'
       redirect_back(fallback_location: root_path)
@@ -24,6 +23,6 @@ class PboxesController < ApplicationController
   private # strongparameterの設定
 
     def pbox_params
-      params.require(:pbox).permit(:id, :name, :user_id)
+      params.require(:pbox).permit(:name)
     end
 end
