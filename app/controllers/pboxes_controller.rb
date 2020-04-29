@@ -1,8 +1,4 @@
 class PboxesController < ApplicationController
-  def index
-    @user = User.find_by(params[:user_id])
-    @pboxes = Pbox.all
-  end
   
   def new
     @user = User.find(params[:id])
@@ -10,6 +6,7 @@ class PboxesController < ApplicationController
   end
   
   def create
+    @user = User.find(params[:id])
     @pbox = current_user.pboxes.build(pbox_params)
     if @pbox.save
       flash[:success] = '新規作成に成功しました。'

@@ -44,6 +44,11 @@ class UsersController < ApplicationController
     flash[:success] = "#{@user.name}のデータを削除しました。"
     redirect_to users_url
   end
+  
+  def pbox_index
+    @user = User.find(params[:id])
+    @pboxes = Pbox.all
+  end
 
   private
 

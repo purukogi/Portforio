@@ -16,9 +16,13 @@ Rails.application.routes.draw do
   get 'event_edit', to: 'events#event_edit'
   patch 'event_update', to: 'events#event_update'
   
-  # プライベートボックス
+  # プライベートボックスページ
   
   resources :users do
-    resources :pboxes
+    member do 
+      get 'pbox_index'
+      get 'pbox_new', to: 'pboxes#new'
+      post 'pbox_create', to: 'pboxes#create'
+    end
   end
 end
