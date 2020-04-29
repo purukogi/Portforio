@@ -47,7 +47,7 @@ class UsersController < ApplicationController
   
   def pbox_index
     @user = User.find(params[:id])
-    @pboxes = Pbox.all
+    @pboxes = @user.pboxes.where(id: 1..999)
   end
 
   private

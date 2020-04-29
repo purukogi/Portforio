@@ -1,7 +1,7 @@
 class CreatePboxes < ActiveRecord::Migration[5.1]
   def change
     create_table :pboxes do |t|
-      t.string :name
+      t.string :pbox_name
       t.references :user, foreign_key: true
 
       t.timestamps

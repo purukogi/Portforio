@@ -20,6 +20,6 @@ class PboxesController < ApplicationController
   private # strongparameterの設定
 
     def pbox_params
-      params.require(:pbox).permit(:name)
+      params.require(:pbox).permit(:pbox_name)
     end
 end
