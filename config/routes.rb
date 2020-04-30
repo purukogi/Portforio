@@ -23,6 +23,7 @@ Rails.application.routes.draw do
       get 'pbox_index'
       get 'pbox_new', to: 'pboxes#new'
       post 'pbox_create', to: 'pboxes#create'
+      delete 'pbox_delete', to: 'pboxes#destroy'
     end
   end
 end

@@ -17,6 +17,13 @@ class PboxesController < ApplicationController
     end
   end
   
+  def destroy
+    @pbox = Pbox.find(params[:id])
+    @pbox.destroy
+    flash[:success] = "データを削除しました。"
+    redirect_back(fallback_location: root_path)
+  end
+  
   private # strongparameterの設定
 
     def pbox_params
