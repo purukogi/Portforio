@@ -20,10 +20,9 @@ Rails.application.routes.draw do
   
   resources :users do
     member do 
-      get 'pbox_index'
-      get 'pbox_new', to: 'pboxes#new'
-      post 'pbox_create', to: 'pboxes#create'
-      delete 'pbox_delete', to: 'pboxes#destroy'
+      resources :pboxes do
+      end
     end
+    
   end
 end

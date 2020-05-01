@@ -1,5 +1,10 @@
 class PboxesController < ApplicationController
   
+  def index
+    @user = User.find(params[:id])
+    @pboxes = @user.pboxes.where(id: 1..999)
+  end
+  
   def new
     @user = User.find(params[:id])
     @pbox = Pbox.new
@@ -17,6 +22,19 @@ class PboxesController < ApplicationController
     end
   end
   
+  def edit
+  end
+  
+  def update
+    @pbox = Pbox.find_by(params[:user_id])
+    if @pbox.update_attributes(pbox_params)
+      flash[:success] = 'データを更新しました。'
+      redirect_back(fallback_location: root_path)
+    else
+      redirect_back(fallback_location: root_path)
+    end
+  end
+  
   def destroy
     @pbox = Pbox.find(params[:id])
     @pbox.destroy
@@ -27,6 +45,6 @@ class PboxesController < ApplicationController
   private # strongparameterの設定
 
     def pbox_params
-      params.require(:pbox).permit(:pbox_name)
+      params.permit(:pbox_name)
     end
 end
