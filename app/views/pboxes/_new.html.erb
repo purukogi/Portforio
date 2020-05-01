@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           
-          <%= form_with(model: @pbox, url: pboxes_path(@user), local: true, method: :post) do |f| %>
+          <%= form_with(model: @pbox, url: user_pboxes_path(@user), local: true, method: :post) do |f| %>
 
             <%= f.label :"名前", class: "eventname" %>
             <%= f.text_field :pbox_name, class: "form-control" %>

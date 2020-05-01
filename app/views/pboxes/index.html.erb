@@ -34,14 +34,14 @@
     <% @pboxes.each do |pbox| %>
     <tr>
       <td><%= pbox.pbox_name %></td>
-      <td><%= link_to "編集", edit_pbox_path(pbox), remote: true, class: "btn btn-success" %></td>
-      <td><%= link_to "削除", pbox_path(id: pbox.id), method: :delete, data: { confirm: "削除してよろしいですか？" }, class: "btn btn-danger" %></td>
+      <td><%= link_to "編集", edit_user_pbox_path(id: @user.id), remote: true, class: "btn btn-success" %></td>
+      <td><%= link_to "削除", user_pbox_path(id: pbox.id), method: :delete, data: { confirm: "削除してよろしいですか？" }, class: "btn btn-danger" %></td>
     </tr>
     <% end %>
   </table>
 </div>
 
-<%= link_to "新規登録", new_pbox_path(@user), remote: true, class: "col-md-12 center new_event" %>
+<%= link_to "新規登録", new_user_pbox_path(@user), remote: true, class: "col-md-12 center new_event" %>
 
 <!--モーダルウインドウ表示-->
 <div id="new" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>

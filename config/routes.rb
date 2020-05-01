@@ -20,7 +20,9 @@ Rails.application.routes.draw do
   
   resources :users do
     member do 
-      resources :pboxes do
+    end
+    resources :pboxes do
+      member do
       end
     end
     

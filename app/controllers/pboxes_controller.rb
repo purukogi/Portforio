@@ -1,18 +1,19 @@
 class PboxesController < ApplicationController
   
   def index
-    @user = User.find(params[:id])
-    @pboxes = @user.pboxes.where(id: 1..999)
+    @user = User.find(params[:user_id])
+    @pboxes = Pbox.all
+    
   end
   
   def new
-    @user = User.find(params[:id])
+    @user = User.find(params[:user_id])
     @pbox = Pbox.new
   end
   
   def create
-    @user = User.find(params[:id])
-    @pbox = current_user.pboxes.build(pbox_params)
+    @user = User.find(params[:user_id])
+    @pbox = @user.pboxes.new(pbox_params)
     if @pbox.save
       flash[:success] = '新規作成に成功しました。'
       redirect_back(fallback_location: root_path)
@@ -36,7 +37,7 @@ class PboxesController < ApplicationController
   end
   
   def destroy
-    @pbox = Pbox.find(params[:id])
+    @pbox = Pbox.find_by(params[:user_id])
     @pbox.destroy
     flash[:success] = "データを削除しました。"
     redirect_back(fallback_location: root_path)
