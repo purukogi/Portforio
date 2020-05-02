@@ -28,7 +28,7 @@ class PboxesController < ApplicationController
   end
   
   def update
-    @pbox = Pbox.find_by(params[:user_id])
+    @pbox = Pbox.find(params[:id])
     if @pbox.update_attributes(pbox_params)
       flash[:success] = 'データを更新しました。'
       redirect_back(fallback_location: root_path)
