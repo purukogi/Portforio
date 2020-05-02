@@ -24,6 +24,7 @@ class PboxesController < ApplicationController
   end
   
   def edit
+    @pbox = Pbox.find(params[:id])
   end
   
   def update
