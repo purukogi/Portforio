@@ -17,7 +17,7 @@
   <tr>
     <td class="col-md-4" style="background-color:#0077bb;">イベントスケジュール</td>
     <td class="col-md-4"><%= link_to "プライベートボックス", user_pboxes_path(@user.id), local: true, class: "pbox_link" %></td>
-    <td class="col-md-4" style="background-color:#eeeeee;">冷蔵・冷凍庫内保管物</td>
+    <td class="col-md-4"><%= link_to "冷蔵・冷凍庫内保管物", user_refrigerators_path(@user.id), local: true, class: "pbox_link" %></td>
   </tr>
 </table>
 

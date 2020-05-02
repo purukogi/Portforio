@@ -3,7 +3,6 @@ class PboxesController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @pboxes = current_user.pboxes.where(id: 1..999)
-    
   end
   
   def new

@@ -25,6 +25,9 @@ Rails.application.routes.draw do
       member do
       end
     end
-    
+    resources :refrigerators do
+      member do
+      end
+    end
   end
 end
