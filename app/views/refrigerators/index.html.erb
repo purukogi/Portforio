@@ -30,6 +30,7 @@
   <table class="col-md-12 event_menu_header">
     <tr>
       <td>名前</td>
+      <td class="col-md-2">賞味期限</td>
       <td class="col-md-1">編集</td>
       <td class="col-md-1">削除</td>
     </tr>
@@ -37,6 +38,7 @@
     <% @refrigerators.each do |refrigerator| %>
     <tr>
       <td><%= refrigerator.name %></td>
+      <td><%= refrigerator.expiration_date %></td>
       <td><%= link_to "編集", edit_user_refrigerator_path(id: refrigerator.id), remote: true, class: "btn btn-success" %></td>
       <td><%= link_to "削除", user_refrigerator_path(id: refrigerator.id), method: :delete, data: { confirm: "削除してよろしいですか？" }, class: "btn btn-danger" %></td>
     </tr>

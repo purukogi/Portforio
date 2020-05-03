@@ -46,7 +46,7 @@ class RefrigeratorsController < ApplicationController
   private # strongparameterの設定
 
     def refrigerator_params
-      params.require(:refrigerator).permit(:name)
+      params.require(:refrigerator).permit(:name, :expiration_date)
     end
   
 end
