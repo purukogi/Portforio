@@ -36,7 +36,7 @@
     
     <% @refrigerators.each do |refrigerator| %>
     <tr>
-      <td><%= refrigerator.refrigerator_name %></td>
+      <td><%= refrigerator.name %></td>
       <td><%= link_to "編集", edit_user_refrigerator_path(id: refrigerator.id), remote: true, class: "btn btn-success" %></td>
       <td><%= link_to "削除", user_refrigerator_path(id: refrigerator.id), method: :delete, data: { confirm: "削除してよろしいですか？" }, class: "btn btn-danger" %></td>
     </tr>

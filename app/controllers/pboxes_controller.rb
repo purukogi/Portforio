@@ -14,10 +14,10 @@ class PboxesController < ApplicationController
     @user = User.find(params[:user_id])
     @pbox = @user.pboxes.new(pbox_params)
     if @pbox.save
-      flash[:success] = '新規作成に成功しました。'
+      flash[:success] = 'ボックスにアイテムを追加しました。'
       redirect_back(fallback_location: root_path)
     else
-      flash[:danger] = '新規作成に失敗しました。'
+      flash[:danger] = '名前が入力されていません。'
       redirect_back(fallback_location: root_path)
     end
   end
