@@ -21,6 +21,11 @@
   <%= f.text_field :room, class: "form-control" %>
 </div>
 
+<div class="room">
+  <%= f.label :removal_day, class: "label-#{yield(:class_text)}" %>
+  <%= f.date_field :removal_day, class: "form-control" %>
+</div>
+
 <div class="password">
   <%= f.label :password, class: "label-#{yield(:class_text)}" %>
   <%= f.password_field :password, class: "form-control" %>

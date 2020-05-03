@@ -9,6 +9,7 @@ ja:
           email: メールアドレス
           department: 入居中のソーシャルアパートメント名
           room: 部屋番号
+          removal_day: 冷蔵庫整理日
           password: パスワード
           password_confirmation: パスワード再入力
           created_at: 作成日
