@@ -14,10 +14,10 @@ class PboxesController < ApplicationController
     @user = User.find(params[:user_id])
     @pbox = @user.pboxes.new(pbox_params)
     if @pbox.save
-      flash[:success] = 'ボックスにアイテムを追加しました。'
+      flash[:success] = 'ボックスにアイテムを追加しました'
       redirect_back(fallback_location: root_path)
     else
-      flash[:danger] = '名前が入力されていません。'
+      flash[:danger] = '名前が入力されていません'
       redirect_back(fallback_location: root_path)
     end
   end
@@ -29,7 +29,7 @@ class PboxesController < ApplicationController
   def update
     @pbox = Pbox.find(params[:id])
     if @pbox.update_attributes(pbox_params)
-      flash[:success] = 'データを更新しました。'
+      flash[:success] = 'データを更新しました'
       redirect_back(fallback_location: root_path)
     else
       redirect_back(fallback_location: root_path)
@@ -39,7 +39,7 @@ class PboxesController < ApplicationController
   def destroy
     @pbox = Pbox.find(params[:id])
     @pbox.destroy
-    flash[:success] = "データを削除しました。"
+    flash[:success] = "データを削除しました"
     redirect_back(fallback_location: root_path)
   end
   

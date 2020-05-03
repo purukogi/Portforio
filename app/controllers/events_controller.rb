@@ -7,9 +7,10 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     if @event.save
-      flash[:success] = 'イベントを追加しました。'
+      flash[:success] = 'イベントを登録しました。'
       redirect_back(fallback_location: root_path)
     else
+      flash[:danger] = 'イベント名、開催場所、開催日程は必須入力です'
       redirect_back(fallback_location: root_path)
     end
   end
@@ -24,6 +25,7 @@ class EventsController < ApplicationController
       flash[:success] = 'イベントを更新しました。'
       redirect_back(fallback_location: root_path)
     else
+      flash[:danger] = 'イベント名、開催場所、開催日程は必須入力です'
       redirect_back(fallback_location: root_path)
     end
   end

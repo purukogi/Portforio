@@ -28,7 +28,7 @@
 
 <div class="col-md-12 event_menu center">
   
-  <div class="removal_day">次回冷蔵庫整理日：<%= @user.removal_day %></div>
+  <div class="removal_day">次回冷蔵庫整理日：<%= l(@user.removal_day, format: :long) %></div>
 
   <table class="col-md-12 event_menu_header">
     <tr>
@@ -41,7 +41,7 @@
     <% @refrigerators.each do |refrigerator| %>
     <tr>
       <td><%= refrigerator.name %></td>
-      <td><%= refrigerator.expiration_date %></td>
+      <td><%= l(refrigerator.expiration_date, format: :long) %></td>
       <td><%= link_to "編集", edit_user_refrigerator_path(id: refrigerator.id), remote: true, class: "btn btn-success" %></td>
       <td><%= link_to "削除", user_refrigerator_path(id: refrigerator.id), method: :delete, data: { confirm: "削除してよろしいですか？" }, class: "btn btn-danger" %></td>
     </tr>

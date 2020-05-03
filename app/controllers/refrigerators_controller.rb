@@ -15,10 +15,10 @@ class RefrigeratorsController < ApplicationController
     @user = User.find(params[:user_id])
     @refrigerator = @user.refrigerators.new(refrigerator_params)
     if @refrigerator.save
-      flash[:success] = '冷蔵・冷凍庫に食品を追加しました。'
+      flash[:success] = '冷蔵・冷凍庫に食品を追加しました'
       redirect_back(fallback_location: root_path)
     else
-      flash[:danger] = '名前が入力されていません。'
+      flash[:danger] = '名前、賞味期限が入力されていません'
       redirect_back(fallback_location: root_path)
     end
   end
@@ -30,7 +30,7 @@ class RefrigeratorsController < ApplicationController
   def update
     @refrigerator = Refrigerator.find(params[:id])
     if @refrigerator.update_attributes(refrigerator_params)
-      flash[:success] = 'データを更新しました。'
+      flash[:success] = 'データを更新しました'
       redirect_back(fallback_location: root_path)
     else
       redirect_back(fallback_location: root_path)
@@ -40,7 +40,7 @@ class RefrigeratorsController < ApplicationController
   def destroy
     @refrigerator = Refrigerator.find(params[:id])
     @refrigerator.destroy
-    flash[:success] = "データを削除しました。"
+    flash[:success] = "データを削除しました"
     redirect_back(fallback_location: root_path)
   end
   

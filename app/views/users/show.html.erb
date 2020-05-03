@@ -29,7 +29,6 @@
       <td>イベント詳細</td>
       <td>開催場所</td>
       <td>開催日程</td>
-      <td colspan="2">参加状況</td>
       <% if current_user.admin? %>
         <td>編集</td>
         <td>削除</td>
@@ -44,8 +43,6 @@
       <td style="text-align:left; padding:5px 5px 5px 6px;"><%= event.eventdetail %></td>
       <td class="col-md-2"><%= event.place %></td>
       <td class="col-md-2"><%= l(event.eventday, format: :long) %></td>
-      <td class="col-md-1"></td>
-      <td class="col-md-1"></td>
       <% if current_user.admin? %>
         <td class="col-md-1">
           <%= link_to "編集", {controller: "events", action: "event_edit", id: event.id}, remote: true, class: "btn btn-success" %>
