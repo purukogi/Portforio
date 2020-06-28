@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20200503080221) do
 
   create_table "refrigerators", force: :cascade do |t|
     t.string "name"
-    t.date "removal_day", default: "2020-05-03"
+    t.date "removal_day", default: "2020-05-06"
     t.date "expiration_date"
     t.integer "user_id"
     t.datetime "created_at", null: false
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20200503080221) do
     t.boolean "admin", default: false
     t.string "department"
     t.integer "room"
-    t.date "removal_day", default: "2020-05-03"
+    t.date "removal_day", default: "2020-05-06"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
