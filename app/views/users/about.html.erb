@@ -1,0 +1,44 @@
+<% provide(:title, 'Sign up') %>
+<% provide(:class_text, 'signup') %>
+<% provide(:button_text, '新規作成') %>
+<h1 class="h1_text">ソーシャルアパートメントについて</h1>
+
+<div id="youtube-movie">
+  <div id="youtube-movie-content">
+    <div id="player" style="text-align: center;"></div>  
+  </div>
+</div>
+
+
+<script src="//www.youtube.com/iframe_api"></script>
+
+<script type="text/javascript">  
+var onYouTubeIframeAPIReady = function(){  
+    var player = new YT.Player("player", {  
+        videoId: "5n-j7gAKqP0", // 再生する動画のYouTube ID  
+        width : 800,　// プレイヤーの幅  
+        height: 600,　// プレイヤーの高さ
+        playerVars: {
+        autoplay: 1, // 自動再生の設定
+        loop: 99 // ループの設定
+      },
+        // ↓イベント設定↓  
+        events: {  
+            'onStateChange': onPlayerStateChange // 状態が変更された時  
+        } 
+        
+　　　　// ↑イベント設定↑  
+    });  
+};  
+// 状態が変更された時  
+function onPlayerStateChange(event) {  
+    // 現在のプレーヤーの状態を取得  
+    var status = event.data;  
+    // 再生終了時  
+    if (status == YT.PlayerState.ENDED) {  
+        // ↓任意の処理を記述↓  
+　　　　console.log("--再生終了しました。--");  
+　　　　// ↑任意の処理を記述↑  
+    }  
+}  
+</script>  
