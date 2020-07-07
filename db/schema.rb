@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200503080221) do
+ActiveRecord::Schema.define(version: 20200630141626) do
 
   create_table "events", force: :cascade do |t|
     t.string "eventname"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 20200503080221) do
     t.string "department"
     t.integer "room"
     t.date "removal_day", default: "2020-05-06"
+    t.string "uid"
+    t.string "provider"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

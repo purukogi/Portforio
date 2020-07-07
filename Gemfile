@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails',        '~> 5.1.6'
+gem 'rails',        '~> 5.2.3'
 gem 'rails-i18n' # 今回はこのgemを追加しています。
 gem 'bcrypt'
 gem 'faker'
@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks',   '~> 5'
 gem 'jbuilder',     '~> 2.5'
+gem 'omniauth-google-oauth2'
+gem 'dotenv-rails' #APIキーをGitHubに上げな為に環境変数に入れます。このgemは.envファイルから環境変数をロードする為のgemです。
 
 group :development, :test do
   gem 'sqlite3'
