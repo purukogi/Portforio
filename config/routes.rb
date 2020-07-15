@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   get 'events/new'
-
   root 'static_pages#top'
-
   
   # トップページ
   get '/signup', to: 'users#new'
