@@ -18,7 +18,7 @@
     <td class="col-md-4">
       <%= link_to "イベントスケジュール", {controller: "users", action: "show", id: current_user.id}, local: true, class: "event_link" %>
     </td>
-    <td class="col-md-4" style="background-color:#0077bb;">プライベートボックス</td>
+    <td class="col-md-4" style="background-color:#434343;">プライベートボックス</td>
     <td class="col-md-4"><%= link_to "冷蔵・冷凍庫内保管物", {controller: "refrigerators", action: "index", id: current_user.id}, local: true, class: "pbox_link" %></td>
   </tr>
 </table>
